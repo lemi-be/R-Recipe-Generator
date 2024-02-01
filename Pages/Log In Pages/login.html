@@ -15,12 +15,25 @@
         <header>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">Home</a</li>
+                    <li><a href="/Pages/index.html">Home</a</li>
                     <li><a href="#About">About</a></li>
                 </ul>
             </nav>
         </header>
         <div class="welcome">
+            <div class="login-form">
+                <p class="topic">Log In</p>
+                <p class="description">Log into your account</p>
+                <form action="userdata.db" method="post">
+                    <input type="email" name="email" id="email" placeholder="Email Id"> <br>
+                    <input type="password" name="password" id="password" placeholder="Password"><br>                                 
+                    <input type="button" value="Sign Up" id="sign-up-button">
+                    <p>I don't have account. <b><a href="signup.html">Create Account</a></b></p>
+                    <p>---------- Or ----------</p>
+                    <input type="button" value="Continue with Google" id="signInWith"> <br>
+                    <input type="button" value="Continue with Microsoft" id="signInWith">
+                </form>
+            </div>
             
         </div>
     </section>

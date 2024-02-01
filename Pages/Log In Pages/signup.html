@@ -19,30 +19,35 @@
 <body >
     <section class="hero">
         <div class="welcome2">
-            <div class="sign-up-form">
-                <p class="topic">Sign Up</p>
-                <p class="description">Create a account to access the recipe generator.</p>
-                <form action="userdata.db" method="post">
-                    <input type="text" name="fname" id="fname" placeholder="First Name">
-                    <input type="text" name="lname" id="lname" placeholder="Last Name"> <br>
-                    <input type="email" name="email" id="email" placeholder="Email Id">
-                    <select name="gender" id="gender"> 
-                        <option value="00">Gender</option>
-                        <option value="01">Male</option>
-                        <option value="02">Female</option>
-                    </select> <br>
-                    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number">
-                    <input type="date" name="dateofBirth" id="dateofBirth" placeholder="DOB"> <br>
-                    <input type="password" name="password" id="password" placeholder="Password">
-                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"> <br>
-                    <input type="checkbox" name="terms_and_privacyPolicy" id="terms_and_privacyPolicy"> 
-                    <label for="terms_and_privacyPolicy">I've read and agree with <b><a href="#terms">Terms of Services</a></b> and our <b><a href="#privacy">Privacy Policy</a></b></label>
-                    <input type="button" value="Sign Up" id="sign-up-button">
-                    <p>Already have an account? <b><a href="login.html">Log In</a></b></p>
-                    <p>---------- Or ----------</p>
-                    <input type="button" value="Sign Up with Google">
-                    <input type="button" value="Sign Up with Microsoft">
-                </form>
+            <div class="signup-form">
+                <div class="signup-header">
+                    <p class="topic">Sign Up</p>
+                    <p class="description">Create a account to access the recipe generator.</p>
+                </div>
+                <div class="signup">
+                    <form action="userdata.db" method="post">
+                        <input type="text" name="fname" id="fname" placeholder="First Name">
+                        <input type="text" name="lname" id="lname" placeholder="Last Name"> <br>
+                        <input type="email" name="email" id="email" placeholder="Email Id">
+                        <select name="gender" id="gender"> 
+                            <option value="00">Gender</option>
+                            <option value="01">Male</option>
+                            <option value="02">Female</option>
+                        </select> <br>
+                        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number">
+                        <input type="date" name="dateofBirth" id="dateofBirth" placeholder="DOB"> <br>
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"> <br>
+                        <input type="checkbox" name="terms_and_privacyPolicy" id="terms_and_privacyPolicy"> 
+                        <label for="terms_and_privacyPolicy">I've read and agree with <b><a href="#terms">Terms of Services</a></b> and our <b><a href="#privacy">Privacy Policy</a></b></label>
+                        <input type="button" value="Sign Up" id="sign-up-button">
+                        <p>Already have an account? <b><a href="login.html">Log In</a></b></p>
+                        <p>---------- Or ----------</p>
+                        <input type="button" value="Sign Up with Google">
+                        <input type="button" value="Sign Up with Microsoft">
+                    </form>
+                </div>              
+                
             </div>
         </div>
     </section>

@@ -52,6 +52,7 @@ fw: stands for font weght
      background-color: #252525cc;
      max-height: 100vh;
      overflow-y: hidden;
+     
     
     }
     .bspacing {
@@ -60,9 +61,12 @@ fw: stands for font weght
     .topic {
         font-size: var(--topic-fs);
         padding-left: 1rem;
+        width: max-content;
     }
      .description {
         padding-left: 1rem;
+        padding-bottom: 1rem;
+        width: fit-content;
      }
     .navbar ul{
         font-size: var(--main-fs);
@@ -72,31 +76,63 @@ fw: stands for font weght
         display: flex;
         max-width: 100vw;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: flex-end;
+        gap: 3rem;
+        padding-right: 5rem;
         height: 50px;
         align-items: center;
         flex-wrap: wrap;
     }
     .welcome { /* log in design*/
-        display: grid;
-        grid-template-columns: 1fr;
-        height: calc(100vh - 82px);
-        min-height: 80vh;
+        display: flex;
+        height: calc(100vh - 5.1rem);
         margin-inline: 1rem;
         margin-block: 1rem;
         background-color: #1a1a1a70;
         background-image: url(/Resource/images/hero\ image.jpg); 
         background-size: cover;
         background-blend-mode: overlay;
-        justify-items: center;
+        background-color: #252525;
         align-items: center;
         color: var(--main-fc);
         border-radius: 11px;
-        text-align: center;
-        padding-inline: 50px;
+        padding: 0 auto;
         padding-block: auto;
-        background-color: #252525c9;
         
+    }
+    .login-form {
+        margin-inline: auto;
+        object-fit: cover;
+        width: fit-content;
+        
+    }
+    .login-form form {
+        width: auto;
+    }
+    .login-form input {
+        display: flex;
+        width: 100%;
+        object-fit: cover;
+        margin-left: 0;
+        margin-inline: auto;
+        margin-block: .2rem;
+    }
+    .login-form #sign-up-button {
+        width: 104%
+    }
+    .login-form #signInWith {
+        width: 104%
+    }
+    .login-form p {
+        text-align: center;
+        padding-left: 20px;
+        padding-block: 1rem;
+    }
+    .login-form p:nth-of-type(2) {
+        text-align: center;
+        padding-left: 20px;
+        padding-block-start: unset;
+        padding-block-end: 01rem;
     }
 
     /* .welcome2 is to design sign up page*/
@@ -118,19 +154,16 @@ fw: stands for font weght
         padding-block: auto;
            
     }
-    .sign-up-form {
-        margin-inline: auto;
-    }
+    
+    /* General Form Design */
     input {
         width: 40%;
-        margin: 1rem;
         background-color: transparent;
         border: 1px solid var(--main-fc);
         border-radius: 0.5rem;
         padding: 0.3rem;
         color: var(--main-fc);
-        
-            
+                  
     }
     select {
         width: 42%;
@@ -150,65 +183,86 @@ fw: stands for font weght
         opacity: 100%;
         color: var(--main-fc);
     }
-    /* 8 is to design terms and service */
-    input:nth-of-type(8) {
-        width: 10%;
-        margin-right: 0;
+    /* General design */
+    .signup-header {
+        margin: 0;
         
-        
+        width:fit-content;
         
     }
-    /* the label for terms and sevices */
-    label {
-        margin: 30px;
-        margin-left: 0;
-    }
-    
-    /* type 9 is the Sign Up design */
-    input:nth-of-type(9) {
-        width: calc(100% - 68px);
-    }
-     form p {
+    .signup-header .topic {
         text-align: center;
-     }
-     input:nth-of-type(10), input:nth-of-type(11) {
-        width: 42%;
-     }
+       
+    }
+    .signup-form {
+        display: flex;
+        flex-direction: column;
+        margin-inline: auto;
+        width: fit-content;
+        align-items: center;
 
-    @media (max-width: 500px) {
+    }
+    .signup form {
+        object-fit: cover;
+        text-align: center;
+    }
+    .signup form select {
+        margin: .4rem;
+    }
+    .signup form input {
+        margin: .4rem;
+    }
+    input:nth-of-type(8) {
+        width: 5%;     
+        }
+    input:nth-of-type(9) {
+            width: 85%;
+        }
+    @media(min-width: 50em) {
+        .signup form select {
+            margin: .8rem;
+        }
+        .signup form input {
+            margin: .8rem;
+        }
+        .topic {
+            text-align: center;
         
-        .sign-up-form {
-            width: 400px;
-            margin-inline: auto;
-            margin-block: auto;         
-        }
-        
-        .description {
-            font-size: 0.8rem;
-        }
-        .welcome2 {
-           padding-inline: auto;
-                           
-        }
-        input, select{
-            margin: 0.5rem;
-            font-size: 0.8rem;
             
         }
+         .description {
+            padding-left: 0;
+            padding-bottom: 1rem;
+           
+         }
+    }
+
+    @media(max-width: 400px) {
+        .signup label{
+            font-size: 0.59rem;
+        }
+    }
+
+
+
+    
+   
+    @media (max-width: 500px) {
+         /* General Design for the small Screen */
         ::placeholder {
             font-size: 0.8rem;
         }
         label {
             font-size: 0.7rem;
-            text-align: center;
+            
         }
         input:nth-of-type(8) {
             width: 5%;
-            margin-right: 0;
+            
            
         }
         input:nth-of-type(9) {
-            width: calc(100% - 35px);
+            width: 85%;
         }
          form p {
             text-align: center;
@@ -217,4 +271,23 @@ fw: stands for font weght
          input:nth-of-type(10), input:nth-of-type(11) {
             width: 43%;
          }
+
+         .topic {
+            padding-left: 0;
+            
+        }
+         .description {
+            padding-left: 0;
+            padding-bottom: 1rem;
+           
+         }
+    }
+    .topic {
+        text-align: center;
+    }
+
+    @media(max-height: 600px) {
+        .signup-form, .login-form {
+            transform: scale(0.6);
+        }
     }
