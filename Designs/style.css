@@ -24,14 +24,16 @@ fw: stands for font weght
 --fw-400: 400;
 --fw-700: 700;
 }
-li, a {
+li, a { 
     text-decoration: none;
     list-style: none;
     color: inherit;
+    /* to decorate the list and anchor tag all over the page */
 }
 .primary-heading {
     font-size: var(--topic-fs);
     font-weight: var(--fw-700);
+    /* setting font style for the primary headings */
 }
 button {
     background-color: var(--button-color);
@@ -54,6 +56,7 @@ body {
 }
 .bspacing {
     margin-block: 50px;
+    /* adding a margin for a class with bspacing */
 }
 .topic {
     font-size: var(--topic-fs);
@@ -71,6 +74,7 @@ body {
     height: 50px;
     align-items: center;
     flex-wrap: wrap;
+    /* setting a design for a unorderd list in navbar */
 }
 .welcome{
     display: grid;
@@ -94,16 +98,19 @@ body {
 }
 .primary-heading {
     font-size: var(--small-screen-fs);
+    /* setting a font style for small screen */
 }
 
-img {
+.image-div img {
     display: none;
     position: absolute;
+    /* hinding unnecessary images from the smaller screen */
 }
 #about {
     text-align: justify;
     margin-inline: 1rem;
     font-size: var(--main-fs);
+
     
 }
 .footer {
@@ -135,12 +142,14 @@ img {
 }
 
 @media (max-width: 500px){
+    /* styles for screen size under 500px */
     .button-no-style {
         border: unset;
         background-color: unset;
         padding: unset;
         font-size: var(--main-fs);
         font-weight: var(--fw-700);
+        /* used to remove some botton style in for the smaller screen */
     }
 
     .img-div {
@@ -148,16 +157,19 @@ img {
         display: none;
         width: 0;
         height: 0;
+        /* to hide unnecessary div's from smaller screen */
     }
     .welcome {
         display: grid;     
     }
 }
 @media (min-width: 50em){
+    /* design for bigger screens */
     .navbar ul{
         justify-content: end;
         padding: 0 3rem;
         height: 70px;
+        /* setting ul design for bigger screen */
     }
     .navbar ul > li {
         padding:  0 40px;
@@ -178,6 +190,7 @@ img {
         object-fit: cover;
         border-radius: 20px;
         opacity: 90%;
+        /* setting images for the bigger screen */
     }
     .primary-heading {
         font-size: var(--topic-fs);
